@@ -18,7 +18,7 @@
 }
 
 #slider #table_box {
-    width: 700px;
+    width: 600px;
     height: 100%;
 
     position: absolute;
@@ -26,11 +26,11 @@
 }
 
 #slider>#choice>#buyimg {
-    width: 380px;
-    height: 400px;
+    width: 500px;
+    height: 450px;
     position: absolute;
-    top: 130px;
-    left: 15px;
+    top: 100px;
+    left: 0px;
 }
 
 #slider #buyimg img {
@@ -54,11 +54,12 @@
 
 #slider #table_box>.table1 td {
     width: 400px;
-    padding: 15px;
+    padding: 15px 20px;
+    text-align: right;
 }
 
 #choice .table2 {
-    width: 700px;
+    width: 600px;
     height: 200px;
     border: 1px dotted gray;
     border-left: none;
@@ -74,54 +75,67 @@
 
 #choice .table2 td {
     width: 400px;
-    padding: 15px;
+    padding-left:130px;
+    text-align:left;
 }
 
 #slider>#choice>#table_box>.table3 {
-    width: 700px;
-    height: 200px;
+    width: 600px;
+    height: 100px;
     border: 1px dotted gray;
     border-left: none;
     border-right: none;
     border-bottom: none;
+    position: absolute;
+    bottom: 140px;
 }
 
-#choice .table3 th {
-    width: 200px;
-    text-align: left;
+#slider>#choice>#table_box>.table3>form{
+    font-weight: bold;
 }
 
-#slider>#choice>#table_box>.table3 td {
-    width: 400px;
-    padding: 20px;
-    font-size: 35px;
-    color: red;
+#slider>#choice>#table_box>.table3>form> #my_sum{
+    margin-left: 245px;
+    color:red;
+    font-size: 25px;
+    display: inline;
 }
 
-#slider>#choice>#table_box>.table3>.button_box {
+#slider>#choice>#table_box>.table3>form> input[type="button"]{
+    margin-right: 3px;
+}
+
+#slider>#choice>#table_box>.table3>form> input[type="text"]{
+    margin-left:245px;
+}
+
+#slider>#choice>#table_box .button_box {     
     width: 600px;
-    height: 200px;
+    height: 100px;
+    position: absolute;
+    bottom: 50px; 
+   
 }
 
-#slider>#choice>#table_box>.table3>.button_box>a>button {
+#slider>#choice>#table_box .button_box>button {
     margin: 40px 0 0 15px;
     padding: 5px 20px;
     font-size: 25px;
     background-color: white;
 }
 
-#slider>#choice>#table_box>.table3>.button_box>a>button:hover {
+#slider>#choice>#table_box .button_box>button:hover {
     background-color: blanchedalmond;
     cursor: pointer;
 }
 
-#slider>#choice>#table_box>.table3>.button_box>a>.button1:hover {
+#slider>#choice>#table_box .button_box>.button1:hover {
     background-color: red;
     cursor: pointer;
 }
 
 
-#slider>#choice>#table_box>.table3>.button_box>a>.button1 {
+#slider>#choice>#table_box .button_box>.button1 {
     margin: 40px 0 0 10px;
     padding: 5px 20px;
     font-size: 25px;
@@ -131,16 +145,13 @@
     border: none;
 }
 
-
 #content1 {
-
     width: 100%;
-    height: 7900px;
+    height: 7950px;
     position: relative;
 }
 
 #content1>#content_center {
-
     width: 1080px;
     height: 100%;
     margin: 0 auto;
@@ -157,7 +168,6 @@
     background-color: gray;
     font-weight: bold;
     text-align: center;
-
 }
 
 #content1>#content_center .tapmenu>li {
@@ -165,7 +175,6 @@
     display: inline;
     text-align: center;
     padding: 0 65px;
-
 }
 
 #content1>#content_center .tapmenu>li>a {
@@ -183,10 +192,8 @@
 #content1>#content_center #review>#reviewtable {
     width: 1080px;
     height: 350px;
-}
-
-#content1>#content_center>#review>#reviewtable {
     text-align: center;
+    margin: 0 0 30px 0;
 }
 
 #content1>#content_center>#review>#reviewtable .th1 {
@@ -209,9 +216,19 @@
     border-top: none;
 }
 
-#content1>#content_center>#delivery>h2,
-#shipping_textbox {
+#content1>#content_center>#delivery>h2 {
     text-align: center;
+}
+
+#content1>#content_center>#delivery>#shipping_textbox{
+    margin:10px 0 30px 0;
+}
+
+#content1>#content_center>#delivery>#shipping_textbox>ul{
+    padding-left:20px;
+}
+#content1>#content_center>#delivery>#shipping_textbox>ul>li{
+    line-height: 55px;
 }
 
 /* 상품문의 */
@@ -222,6 +239,7 @@
 
 #content1>#content_center>#helptable {
     text-align: center;
+    margin:20px 0;
 }
 
 #content1>#content_center>#helptable .th1 {

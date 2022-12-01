@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +13,13 @@
     <link rel="stylesheet" href="css/sub.css">
 </head>
 
-<body>
+
+
+<body onload="init();">
     <header>
         <div id="logo">
-            <a href="#"><img src="img/로고.png" alt=""></a>
+            <a href=
+            "file:///C:/Users/LINE/Documents/%EC%96%91%EC%84%B1%EC%88%98/%ED%8F%AC%ED%86%A0%EC%83%B5/%EC%87%BC%ED%95%91%EB%AA%B0/index.html"><img src="img/로고.png" alt=""></a>
         </div>
         <nav id="menu">
             <ul>
@@ -60,13 +65,6 @@
                         <th>배송방법</th>
                         <td>무료배송 | 퀵서비스 | 직접수령 | 안전배송</td>
                     </tr>
-
-                    <tr>
-                        <th>주문수량</th>
-                        <td>
-                            <input type="number" name="수량" value="count" max="100" min="1">
-                        </td>
-                    </tr>
                 </table>
 
                 <table class="table2">
@@ -85,29 +83,32 @@
                         <td><strong>0원</strong></td>
                     </tr>
                 </table>
-                
+
                 <div class="table3">
-                <table>
-                    <tr>
-                        <th><strong>총 합계금액</strong></th>
-                        <td><strong>2,170,000</strong></td>
-                    </tr>
-                </table>
+                
+                    <form name="form" method="get">
+                        <br>
+                        수량  <input type=hidden name="sell_price" value="2170000">
+                        <input type="text" name="amount" value="1" size="3" onchange="change();">
+                        <input type="button" value=" + " onclick="add();"><input type="button" value=" - " onclick="del();"><br><br>
+                        <input type="hidden" name="sum">
+                        금액  <div id="my_sum"></div>원
+                    </form>
+                </div>
+
 
                 <div class="button_box">
-                    <a href="#"><button class="button1">구매하기</button></a>
-                    <a href="#"><button>장바구니</button></a>
-                    <a href="#"><button>관심상품</button></a>
+                    <button class="button1">구매하기</button>
+                    <button>장바구니</button>
+                    <button>관심상품</button>
                 </div>
-            </div>
-
             </div>
         </div>
     </div>
 
     <section id="content1">
         <div id="content_center">
-         
+
             <div id="detail">
                 <ul class="tapmenu">
                     <li><a href="#detail">상품상세정보</a></li>
@@ -130,6 +131,7 @@
                 </ul>
 
                 <table id="reviewtable">
+              
                     <tr>
                         <th class="th1">제목</th>
                         <th>작성자</th>
@@ -165,7 +167,7 @@
                         <td>답변완료</td>
                     </tr>
                 </table>
-                <br>
+               
             </div>
 
 
@@ -177,30 +179,32 @@
                     <li><a href="#inquery">상품문의</a></li>
                 </ul>
                 <br>
+
                 <h2>배송안내</h2><br>
 
 
                 <div id="shipping_textbox">
                     <ul>
-                        <li>1.배송료 : 500,000만원 이상 구매 시 무료배송, 그 이하는 3,000원의 배송비를 부담하셔야 합니다.<br>
-                            (도서, 산간, 오지, 제주도, 일부지역, 설치 배송 상품 등은 배송비가 추가될 수 있습니다.)</li><br>
+                        <li>1. 배송료 : 500,000만원 이상 구매 시 무료배송, 그 이하는 3,000원의 배송비를 부담하셔야 합니다.<br>
+                            (도서, 산간, 오지, 제주도, 일부지역, 설치 배송 상품 등은 배송비가 추가될 수 있습니다.)</li>
 
-                        <li>2.부피가 큰 상품은 2박스 이상으로 따로 출고되는 경우가 있으며, 변심으로 인한 반품시 2박스 이상에 대한 왕복 배송비를 부담하셔야 합니다.</li><br>
+                        <li>2. 부피가 큰 상품은 2박스 이상으로 따로 출고되는 경우가 있으며, 변심으로 인한 반품시 2박스 이상에 대한 왕복 배송비를 부담하셔야 합니다.</li>
 
-                        <li>3.제품에 따라 출고지가 다른 제품의 경우, 변심반품시 왕복배송비가 개별부과될 수 있습니다.</li><br>
+                        <li>3. 제품에 따라 출고지가 다른 제품의 경우, 변심반품시 왕복배송비가 개별부과될 수 있습니다.</li>
 
-                        <li>4.배송시간 : 입금확인 후 평균 2~3일 이내에 받아보실 수 있습니다. (주말, 공휴일, 천재지변 제외)</li><br>
+                        <li>4. 배송시간 : 입금확인 후 평균 2~3일 이내에 받아보실 수 있습니다. (주말, 공휴일, 천재지변 제외)</li>
 
-                        <li>5.상품을 여러가지 구매하셨을 경우 여러 박스로 부분 포장되어 발송될 수 있으며, 배송 도착 날짜와 시간이 다를 수도 있습니다.</li><br>
+                        <li>5. 상품을 여러가지 구매하셨을 경우 여러 박스로 부분 포장되어 발송될 수 있으며, 배송 도착 날짜와 시간이 다를 수도 있습니다.</li>
 
-                        <li>6.오후 2시 이후 주문 후 취소나 배송지/옵션 변경 시 고객센터로 연락 주시면 신속히 변경 처리해드립니다.</li><br>
+                        <li>6. 오후 2시 이후 주문 후 취소나 배송지/옵션 변경 시 고객센터로 연락 주시면 신속히 변경 처리해드립니다.</li>
 
-                        <li>7.아래와 같은 경우 입금확인이 어려워 배송이 지연될 수 있습니다. (고객센터로 연락요망)<br>
-                            주문자와 입금자가 달라 확인이 되지 않는 경우 / 주문금액과 입금 금액이 다를 경우 / 주문보다 입금을 먼저 하신 경우</li><br>
+                        <li>7. 아래와 같은 경우 입금확인이 어려워 배송이 지연될 수 있습니다. (고객센터로 연락요망)<br>
+                            주문자와 입금자가 달라 확인이 되지 않는 경우 / 주문금액과 입금 금액이 다를 경우 / 주문보다 입금을 먼저 하신 경우</li>
 
-                        <li>8.주문 후 7일 이내에 입금하지 않으면 주문이 자동 취소됩니다.</li><br>
+                        <li>8. 주문 후 7일 이내에 입금하지 않으면 주문이 자동 취소됩니다.</li>
                     </ul>
                 </div>
+              
             </div>
 
             <div id="inquery">
@@ -248,8 +252,7 @@
                     <td>답변완료</td>
                 </tr>
             </table>
-        </div>
-        </div>
+        </div>       
     </section>
 
     <footer>
@@ -299,6 +302,10 @@
 
         </div>
     </footer>
+
+    <script src="js/js.js">
+      
+    </script>
 </body>
 
 </html>
